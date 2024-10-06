@@ -82,7 +82,7 @@ int main()
     Object cubeObj(&cubeVertexData);
     cubeObj.SetPosition(gSingleLightPosition);
     cubeObj.SetScale(glm::vec3(0.2f, 0.2f, 0.2f));
-    cubeObj.SetRenderPassPara<RenderPass::ForwardPass>(&lightShader);
+    cubeObj.SetRenderPassPara<RenderPass::LightPass>(&lightShader);
     unlitShadingOpaqueObjects.push_back(cubeObj);
     
     while (window.isOpen())
@@ -143,7 +143,7 @@ int main()
         /* Draw unlit shading objects */
         for (auto& renderObject : unlitShadingOpaqueObjects)
         {
-            auto& renderPara = renderObject.GetRenderPassPara<RenderPass::ForwardPass>();
+            auto& renderPara = renderObject.GetRenderPassPara<RenderPass::LightPass>();
             if (renderPara.pShader == nullptr)
                 continue;
 
