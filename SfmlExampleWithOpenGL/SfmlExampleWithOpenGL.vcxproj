@@ -114,6 +114,16 @@ xcopy /y /s /e "$(ProjectDir)\Glsl\" "$(OutputPath)\Glsl\"</Command>
     <ClInclude Include="Src\Texture.h" />
     <ClInclude Include="Src\VertexData.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\box.jpg" />
+    <Image Include="Resource\floor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Glsl\general.frag" />
+    <None Include="Glsl\general.vert" />
+    <None Include="Glsl\light.frag" />
+    <None Include="Glsl\light.vert" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -4,6 +4,12 @@
     <Filter Include="Src">
       <UniqueIdentifier>{2d2c9d9d-491f-44a0-864e-0920819a16e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{f7515724-e1fa-4564-a0b2-209f97ee721f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Glsl">
+      <UniqueIdentifier>{59482150-8241-4810-9503-e3bd71ff53ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
@@ -53,5 +59,27 @@
     <ClInclude Include="Src\VertexData.h">
       <Filter>Src</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\box.jpg">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="Resource\floor.jpg">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Glsl\general.frag">
+      <Filter>Glsl</Filter>
+    </None>
+    <None Include="Glsl\general.vert">
+      <Filter>Glsl</Filter>
+    </None>
+    <None Include="Glsl\light.frag">
+      <Filter>Glsl</Filter>
+    </None>
+    <None Include="Glsl\light.vert">
+      <Filter>Glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>
