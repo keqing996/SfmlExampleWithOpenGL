@@ -15,8 +15,7 @@ int main()
     /* Init window */
     const int WIDTH = 1200;
     const int HEIGHT = 800;
-    const float W_H_ratio = static_cast<float>(WIDTH) / HEIGHT;
-    const float FOV = 50.0f;
+    const float FOV = 60.0f;
     
     sf::ContextSettings contextSettings;
     contextSettings.depthBits = 24;
@@ -108,7 +107,7 @@ int main()
 
         /* Prepare VP */
         glm::mat4 view = camera.GetViewMatrix();
-        glm::mat4 projection = glm::perspective(glm::radians(FOV), W_H_ratio, 0.1f, 100.0f);
+        glm::mat4 projection = glm::perspective(glm::radians(FOV), static_cast<float>(WIDTH) / HEIGHT, 0.1f, 100.0f);
 
         /* Draw light shading objects */
         for (auto& renderObject : lightShadingOpaqueObjects)

@@ -66,6 +66,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)\ThirdParty\SFML\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-window-s-d.lib;sfml-graphics-s-d.lib;sfml-system-s-d.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /s /e "$(ProjectDir)\Resource\" "$(OutputPath)\Resource\"
+xcopy /y /s /e "$(ProjectDir)\Glsl\" "$(OutputPath)\Glsl\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -86,6 +90,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)\ThirdParty\SFML\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-window-s.lib;sfml-graphics-s.lib;sfml-system-s.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /s /e "$(ProjectDir)\Resource\" "$(OutputPath)\Resource\"
+xcopy /y /s /e "$(ProjectDir)\Glsl\" "$(OutputPath)\Glsl\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Src\Camera.cpp" />
